@@ -1,7 +1,6 @@
 "use strict";
 
 module.exports.helloWorld = async (event) => {
-  console.log("test text")
   console.log(event);
   return {
     statusCode: 200,
