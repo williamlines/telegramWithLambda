@@ -4,7 +4,7 @@ frameworkVersion: "3"
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs18.x
   region: eu-west-2
   environment:
     TELEGRAM_HELLO_WORLD_KEY: ${env:TELEGRAM_HELLO_WORLD_KEY}
