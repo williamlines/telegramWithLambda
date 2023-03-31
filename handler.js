@@ -14,6 +14,7 @@ module.exports.helloWorld = async (event) => {
   console.log(bodyData);
 
   const chatID = bodyData.message.chat.id;
+  console.log(chatID);
 
   await sendMessage(chatID, "Hello World!");
 
