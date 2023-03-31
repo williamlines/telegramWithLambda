@@ -4,6 +4,7 @@ const TELEGRAM_HELLO_WORLD_KEY = process.env.TELEGRAM_HELLO_WORLD_KEY;
 const sendMessage = async (chatID, msg) => {
   const url = `https://api.telegram.org/bot${TELEGRAM_HELLO_WORLD_KEY}/sendMessage?chat_id=${chatID}&text=${msg}`;
   fetch(url);
+  console.log("fetch request made!")
 };
 
 module.exports.helloWorld = async (event) => {
@@ -14,7 +15,6 @@ module.exports.helloWorld = async (event) => {
   console.log(bodyData);
 
   const chatID = bodyData.message.chat.id;
-  console.log(chatID);
 
   await sendMessage(chatID, "Hello World!");
 
